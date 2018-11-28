@@ -1,15 +1,15 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const ingredients = sequelize.define('ingredients', {
+"use strict";
+module.exports = function(sequelize, DataTypes) {
+  var Ingredients = sequelize.define("Ingredients", {
     name: DataTypes.STRING,
     description: DataTypes.STRING
   }, {});
-  ingredients.associate = function (models) {
-    ingredients.belongsTo(models.recipes, {
+  Ingredients.associate = function (models) {
+    Ingredients.belongsTo(models.Recipes, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-  return ingredients;
+  return Ingredients;
 };

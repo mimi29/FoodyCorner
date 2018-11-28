@@ -1,13 +1,13 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const menus = sequelize.define('menus', {
+"use strict";
+module.exports = function (sequelize, DataTypes) {
+  var Menus = sequelize.define("Menus", {
     name: DataTypes.STRING,
     description: DataTypes.STRING
   }, {});
-  menus.associate = function(models) {
-      menus.hasMany(models.categories, {
-        onDelete: "cascade"
-      });
+  Menus.associate = function (models) {
+    Menus.hasMany(models.Categories, {
+      onDelete: "cascade"
+    });
   };
-  return menus;
+  return Menus;
 };
