@@ -13,6 +13,11 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
+    Recipes.belongsTo(models.Members, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
   return Recipes;
 };
