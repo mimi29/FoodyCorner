@@ -1,13 +1,13 @@
 "use strict";
 module.exports = function (sequelize, DataTypes) {
-  var Categories = sequelize.define("Categories", {
+  var Menu = sequelize.define("Menu", {
     name: DataTypes.STRING,
     description: DataTypes.STRING
   }, {});
-  Categories.associate = function(models) {
-    Categories.hasMany(models.Recipes, {
+  Menu.associate = function (models) {
+    Menu.hasMany(models.Category, {
       onDelete: "cascade"
     });
   };
-  return Categories;
+  return Menu;
 };

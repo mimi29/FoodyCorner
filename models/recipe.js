@@ -1,23 +1,23 @@
 "use strict";
 module.exports = function (sequelize, DataTypes) {
-  var Recipes = sequelize.define("Recipes", {
+  var Recipe = sequelize.define("Recipe", {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
   }, {});
-  Recipes.associate = function (models) {
-    Recipes.hasMany(models.Ingredients, {
+  Recipe.associate = function (models) {
+    Recipe.hasMany(models.Ingredient, {
       onDelete: "cascade"
     });
-    Recipes.belongsTo(models.Categories, {
+    Recipe.belongsTo(models.Category, {
       foreignKey: {
         allowNull: false
       }
     });
-    Recipes.belongsTo(models.Members, {
+    Recipe.belongsTo(models.Member, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-  return Recipes;
+  return Recipe;
 };

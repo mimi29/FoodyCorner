@@ -1,13 +1,13 @@
 "use strict";
 module.exports = function (sequelize, DataTypes) {
-  var Members = sequelize.define("Members", {
+  var Member = sequelize.define("Member", {
     name: DataTypes.STRING,
     password: DataTypes.STRING
   }, {});
-  Members.associate = function(models) {
-    Members.hasMany(models.Recipes, {
+  Member.associate = function(models) {
+    Member.hasMany(models.Recipe, {
       onDelete: "cascade"
     });
   };
-  return Members;
+  return Member;
 };
