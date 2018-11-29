@@ -1,8 +1,9 @@
-"use strict";
+
 module.exports = function (sequelize, DataTypes) {
   var Recipe = sequelize.define("Recipe", {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
+    instructions: DataTypes.TEXT
   }, {});
   Recipe.associate = function (models) {
     Recipe.hasMany(models.Ingredient, {
