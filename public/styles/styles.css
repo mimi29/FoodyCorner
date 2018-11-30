@@ -41,29 +41,11 @@
 	font-size: 2em;
 }
 
-/* index */
-
 #content {
-	height:100vh;
-	  
+	height:100vh;	  
 }
 
-.fill {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	flex-shrink: 0;
-	min-width: 100%;
-	min-height: 100%;
-}
-/* .fill img {
-	flex-shrink: 0;
-	min-width: 100%;
-	min-height: 100%
-} */
-
-/* misc */
+/* index */
 
 /* Working method */
 .tinted-image {
@@ -79,3 +61,12 @@
 		url("/images/pexels-photo-691114.jpeg");
 		background-repeat: no-repeat; 	
 }
+	
+.fill {
+	background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* misc */
+

@@ -12,13 +12,13 @@
 </head>
 
 <body>
-  <div id="content">
+  
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
       <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="logo" id="logo"></a>
 
       <form class="form-inline my-2 my-lg-0 offset-4">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
       </form>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -30,16 +30,15 @@
         <ul class="navbar-nav mr-auto" id="navigation">
 
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="homeLink">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/" id="homeLink">Home <span class="sr-only">(current)</span></a>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">About</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" id="recipesLink" href="example/1">Recipes</a>
-              <a class="dropdown-item" id="menuLink" href="#">Menus</a>
-            </div>
+          <li class="nav-item ">
+            <a class="nav-link" id="menuLink" href="menu">Menu</a>
+            {{!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" id="recipesLink" href="recipes">Recipes</a>
+              <a class="dropdown-item" id="menuLink" href="menu">Menu</a>
+            </div> --}}
           </li>
 
           <li class="nav-item dropdown">
@@ -105,7 +104,7 @@
         </div>
       </div>
     </div>
-
+<div id="content">
     {{{body}}}
   </div>
   <footer>
