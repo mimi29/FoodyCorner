@@ -1,3 +1,81 @@
-.list-group-item {
-  line-height: 2.5;
+/* header */
+
+#navbar {
+	height: 100px;
+	background-color: #6b092a;
+}
+
+/* #logo {
+	background: url(../img/logo.png);
+} */
+
+.dropdown:hover>.dropdown-menu {
+	display: block;
+  }
+  
+.dropdown>.dropdown-toggle:active {
+	/*Without this, clicking will make it sticky*/
+	pointer-events: none;
+  }
+
+
+
+/* Footer */
+
+.jumboFoot {
+	margin-bottom: 0;
+}
+
+#jumboFoot1 {
+	/* background-color: rgb(200, 193, 13); */
+	background-color: #6b092a;
+
+}
+
+#jumboFoot2 {
+	background-color: rgb(203, 51, 98);
+	
+}
+
+#footerLinks {
+	font-size: 2em;
+}
+
+/* index */
+
+#content {
+	height:100vh;
+	  
+}
+
+.fill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	flex-shrink: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+/* .fill img {
+	flex-shrink: 0;
+	min-width: 100%;
+	min-height: 100%
+} */
+
+/* misc */
+
+/* Working method */
+.tinted-image {
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      /* rgba(200, 193, 13, 0.45), 
+			rgba(200, 193, 13, 0.45) */
+			rgba(200, 193, 13, 0.45), 
+      rgba(200, 193, 13, 0.45)
+    ),
+    /* bottom, image */
+		url("/images/pexels-photo-691114.jpeg");
+		background-repeat: no-repeat; 	
 }
