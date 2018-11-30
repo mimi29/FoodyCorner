@@ -4,6 +4,10 @@ module.exports = function (sequelize, DataTypes) {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     instructions: DataTypes.TEXT
+  },
+  {
+    timestamps: false,
+    freezeTableName: false
   }, {});
   Recipe.associate = function (models) {
     Recipe.hasMany(models.Ingredient, {
