@@ -1,11 +1,11 @@
 use foody_corner_db;
 
 INSERT INTO members (email, password)
+    VALUES("reed@gmail.com", "password");
+INSERT INTO members (email, password)
+    VALUES("paul@gmail.com", "password");
+INSERT INTO members (email, password)
     VALUES("mary@gmail.com", "password");
-INSERT INTO members (email, password)
-    VALUES("john@gmail.com", "password");
-INSERT INTO members (email, password)
-    VALUES("bog@gmail.com", "password");
 
 INSERT INTO categories(name, description)
     VALUES("Appertize", "appertize");
