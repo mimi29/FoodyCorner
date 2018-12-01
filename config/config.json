@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Summer2018!!",
+    "password": "rontayan",
     "database": "foody_corner_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

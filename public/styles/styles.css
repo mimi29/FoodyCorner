@@ -68,5 +68,31 @@
   overflow: hidden;
 }
 
+/* images and div food2fork api*/
+
+.images{
+	width: 250px;
+	height: 200px;
+}
+.card{
+	width:250px;
+	display: inline-block;
+	margin: 10px;
+}
+
+/* allows scrolling for a specific div */
+body{
+	height: 1000px;
+}
+div{
+	position: relative;
+}
+.content2 {
+	height: 900px;
+  overflow: scroll;
+	width: 100%;
+}
+
+
 /* misc */
 
