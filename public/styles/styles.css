@@ -98,8 +98,8 @@ div{
 	position: relative;
 }
 .content2 {
-	height: 900px;
-  overflow: scroll;
+	height: 850px;
+  overflow-y: scroll;
 	width: 100%;
 }
 
