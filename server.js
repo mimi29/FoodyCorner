@@ -22,6 +22,10 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
+require("./routes/menu-routes-api")(app);
+require("./routes/category-routes-api")(app);
+require("./routes/member-routes-api")(app);
+require("./routes/recipe-routes-api")(app);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 

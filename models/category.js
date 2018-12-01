@@ -8,10 +8,5 @@ module.exports = function (sequelize, DataTypes) {
     timestamps: false,
     freezeTableName: false
   }, {});
-  Category.associate = function (models) {
-    Category.hasMany(models.Recipe, {
-      onDelete: "cascade"
-    });
-  };
   return Category;
 };
