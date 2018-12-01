@@ -8,10 +8,9 @@ module.exports = function (app) {
   });
 
   app.get("/menu", function(req, res) {
-    db.Recipes.findAll({}).then(function(dbRecipes) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("menu", {
         recipe: dbRecipes
-
       });
     });
   });
