@@ -81,7 +81,10 @@
 }
 
 /* allows scrolling for a specific div */
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/recipe_apis
 div{
 	position: relative;
 }
