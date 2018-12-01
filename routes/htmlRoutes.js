@@ -9,9 +9,11 @@ module.exports = function (app) {
 
   app.get("/menu", function(req, res) {
     db.Recipe.findAll({}).then(function(dbRecipes) {
-      res.render("menu", {
+      var recipeObject = {
         recipe: dbRecipes
-      });
+      };
+      console.log(JSON.stringify(recipeObject));
+      res.render("menu", recipeObject);
     });
   });
 
