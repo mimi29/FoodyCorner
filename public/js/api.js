@@ -1,5 +1,3 @@
-// require("dotenv").config();
-
 // Add search feature for user to search recipes fromm food2fork api
 function foodFork(recipe) {
   var key = "f4ffeed17df32b84b9cf053180ec722a";
