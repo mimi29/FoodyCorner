@@ -15,6 +15,14 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/form", function(req, res) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
+      res.render("form", {
+        recipe: dbRecipes
+      });
+    });
+  });
+
   // Load example page and pass in an example by id
   app.get("/recipes/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
