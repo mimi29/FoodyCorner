@@ -3,8 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
   // get all recipes
   app.get("/api/recipes", function (req, res) {
-    db.Member.findAll({
-      include: [db.Recipe]
+    db.Recipe.findAll({
     }).then(function (dbRecipe) {
       res.json(dbRecipe);
     });
@@ -12,20 +11,18 @@ module.exports = function (app) {
 
   // find a recipes
   app.get("/api/recipes/:id", function (req, res) {
-    db.Member.findOne({
+    db.Recipe.findOne({
       where: {
         id: req.params.id
       },
-      include: [db.Recipe]
     }).then(function (dbRecipe) {
       res.json(dbRecipe);
     });
   });
 
-  // add a recipes
   app.post("/api/recipes", function (req, res) {
-    db.Member.create(req.body).then(function (dbMember) {
-      res.json(dbMember);
+    db.Recipe.create(req.body).then(function (dbRecipe) {
+      res.json(dbRecipe);
     });
   });
 
