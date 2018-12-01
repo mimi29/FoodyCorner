@@ -81,9 +81,6 @@
 }
 
 /* allows scrolling for a specific div */
-body{
-	height: 1000px;
-}
 div{
 	position: relative;
 }
