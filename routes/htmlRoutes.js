@@ -11,7 +11,6 @@ module.exports = function (app) {
     db.Menu.findAll({}).then(function(dbRecipes) {
       res.render("menu", {
         recipe: dbRecipes
-
       });
     });
   });

@@ -5,9 +5,16 @@
 	background-color: #6b092a;
 }
 
-/* #logo {
-	background: url(../img/logo.png);
-} */
+/* Sign Up Modal  */
+
+.modal-content {
+	background:#6b092a;
+}
+
+#modalClose {
+	opacity: 1;
+}
+
 
 .dropdown:hover>.dropdown-menu {
 	display: block;
@@ -16,7 +23,11 @@
 .dropdown>.dropdown-toggle:active {
 	/*Without this, clicking will make it sticky*/
 	pointer-events: none;
-  }
+	}
+	
+.dropdown-menu {
+	text-align: right
+}
 
 
 
@@ -27,14 +38,14 @@
 }
 
 #jumboFoot1 {
-	/* background-color: rgb(200, 193, 13); */
-	background-color: #6b092a;
+	background-color: rgb(200, 193, 13);
+	/* background-color: #6b092a; */
 
 }
 
 #jumboFoot2 {
-	background-color: rgb(203, 51, 98);
-	
+	/* background-color: rgb(203, 51, 98); */
+	background-color: #6b092a;
 }
 
 #footerLinks {
@@ -54,8 +65,8 @@
     linear-gradient(
       /* rgba(200, 193, 13, 0.45), 
 			rgba(200, 193, 13, 0.45) */
-			rgba(200, 193, 13, 0.45), 
-      rgba(200, 193, 13, 0.45)
+			rgba(200, 193, 13, 0.35), 
+      rgba(200, 193, 13, 0.35)
     ),
     /* bottom, image */
 		url("/images/pexels-photo-691114.jpeg");
@@ -67,6 +78,31 @@
   height: 100%;
   overflow: hidden;
 }
+
+/* misc */
+
+/* images and div food2fork api*/
+
+.images{
+	width: 250px;
+	height: 200px;
+}
+.card{
+	width:250px;
+	display: inline-block;
+	margin: 10px;
+}
+
+/* allows scrolling for a specific div */
+div{
+	position: relative;
+}
+.content2 {
+	height: 900px;
+  overflow: scroll;
+	width: 100%;
+}
+
 
 /* misc */
 
