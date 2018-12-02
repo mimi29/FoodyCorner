@@ -8,6 +8,14 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/menusrecipe", function (req, res) {
+    db.Menu.findAll({
+      include:[db.Recipe,db.Category]
+    }).then(function (dbMenu) {
+      res.json(dbMenu);
+    });
+  });
+
   app.get("/api/menus/:id", function (req, res) {
     db.Menu.findOne({
       where: {
