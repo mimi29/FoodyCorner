@@ -7,8 +7,8 @@ module.exports = function (app) {
     
   });
 
-  app.get("/menu", function(req, res) {
-    db.Recipe.findAll({}).then(function(dbRecipes) {
+  app.get("/api/menus", function(req, res) {
+    db.Menu.findAll({}).then(function(dbRecipes) {
       res.render("menu", {
         recipe: dbRecipes
       });

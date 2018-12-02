@@ -9,6 +9,23 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/recipes/member/:id", function (req, res) {
+    db.Recipe.findAll({
+      include:[{
+        model: db.Category
+      }],
+      where: {
+        MemberId: req.params.id
+      },
+      order: [
+        ["CategoryId", "ASC"],
+      ],
+    }).then(function (dbRecipe) {
+      //console.log(JSON.stringify(dbRecipe));
+      res.json(dbRecipe);
+    });
+  });
+
   // find a recipes
   app.get("/api/recipes/:id", function (req, res) {
     db.Recipe.findOne({
