@@ -21,7 +21,7 @@ module.exports = function (app) {
         ["CategoryId", "ASC"],
       ],
     }).then(function (dbRecipe) {
-      console.log(JSON.stringify(dbRecipe));
+      //console.log(JSON.stringify(dbRecipe));
       res.json(dbRecipe);
     });
   });
