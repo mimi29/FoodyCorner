@@ -14,8 +14,15 @@
   
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
       <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="logo" id="logo"></a>
-
-      <form class="form-inline my-2 my-lg-0 offset-4">
+      
+            <form name="dateForm" class="offset-2 col-1">
+                <select name="time" id="recipeSearch1">
+                    <option value="searchRecipe" id="searchRecipe">Search for Recipes</option>
+                    <option value="myRecipe" id="myRecipe">My Recipes</option>
+                </select>
+            </form>
+      
+      <form class="form-inline my-2 my-lg-0 offset-1">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBar">
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="submit">Search</button>
       </form>
@@ -38,10 +45,6 @@
               <a class="dropdown-item" id="recipesLink" href="recipes">Recipes</a>
               <a class="dropdown-item" id="menuLink" href="menu">Menu</a>
             </div> --}}
-          </li>
-
-           <li class="nav-item">
-            <a class="nav-link text-white" href="/search" id="searchLink">Search</a>
           </li>
 
            <li class="nav-item">

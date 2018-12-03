@@ -27,7 +27,11 @@ $("#submit").click(function () {
   event.preventDefault();
   $(".content2").empty();
   var recipeSearch = $("#searchBar").val().toLowerCase().trim();
-  foodFork(recipeSearch);
+  if ($("#recipeSearch1").val() === "searchRecipe"){
+    foodFork(recipeSearch);
+  } else {
+    alert("No Recipes to Search");
+  }
 });
 
 $(".content2").scroll();
