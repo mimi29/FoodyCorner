@@ -21,9 +21,14 @@ module.exports = function (app) {
   });
 
   app.post("/api/members", function (req, res) {
-    db.Member.create(req.body).then(function (dbMember) {
-      res.json(dbMember);
-    });
+    db.Member.create(req.body)
+      .then(function (dbMember) {
+        res.json(dbMember);
+      })
+      .catch(function(errors) {
+        console.log(errors);
+        res.json({errors: errors.errors});
+      });
   });
 
   app.delete("/api/members/:id", function (req, res) {
