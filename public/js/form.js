@@ -1,10 +1,12 @@
 // jQuery code for recipe form to post information to database
-$(function(){
+
+$(document).ready(function(){
   var $recipeName = $("#name");
   var $descriptions = $("#description");
   var $ingredients = $("#ingredients");
   var $instructions = $("#instruct");
-  $(".recipe-form").on("submit", function(event){
+  $(document).on("submit", ".recipe-form", insertRecipe);
+  function insertRecipe(event){
     event.preventDefault();
     var newRecipe = {
       name: $recipeName.val().trim(),
@@ -12,14 +14,12 @@ $(function(){
       ingredients: $ingredients.val().trim(),
       instructions: $instructions.val().trim()
     };
-    $.ajax("/api/recipes", {
-      method: "POST",
-      data: newRecipe
-    })
-      .then(function(){
-        console.log("new recipe submitted");
-      });
-  });
+
+    $.post("/api/recipes", newRecipe);
+    $recipeName.val("");
+    $descriptions.val("");
+    $ingredients.val("");
+    $instructions.val("");
+    console.log("New Recipe Submitted");
+  }
 });
-
-
