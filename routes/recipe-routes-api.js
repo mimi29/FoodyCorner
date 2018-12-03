@@ -38,14 +38,17 @@ module.exports = function (app) {
   });
 
   app.post("/api/recipes", function (req, res) {
-    db.Recipe.create({
+    db.Recipes.create({
       name: req.body.name,
       description: req.body.description,
-      instructions: req.body.instructions,
-      
+      ingredients: req.body.ingredients,
+      instructions: req.body.instructions
     }).then(function (dbRecipe) {
       res.json(dbRecipe);
-    });
+    })
+      .catch(function(err){
+        res.json(err);
+      });
   });
 
   app.delete("/api/recipes/:id", function (req, res) {
