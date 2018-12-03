@@ -1,37 +1,24 @@
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script src="/js/form.js" type="text/javascript"></script>
+
 
 <div class="container">
     <form class="recipe-form p-2 mt-1">
         <div class="form-group recipeName">
-            <label for="exampleInputEmail1">Recipe Name</label>
-            <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name of Recipe" required>
+            <label>Recipe Name</label>
+            <input class="form-control" id="name" placeholder="Name of Recipe" required>
         </div>
         <div class="form-group description">
-            <label for="exampleInputPassword1">Description</label>
-            <input class="form-control" id="description" placeholder="description" required>
+            <label>Description</label>
+            <input class="form-control" id="description" placeholder="Recipe Description" required>
         </div>
         <div class="form-group ingredients">
-            <label for="exampleTextarea">Ingredients</label>
+            <label>Ingredients</label>
             <textarea class="form-control" id="ingredients" rows="10" required></textarea>
         </div>
         <div class="form-group instruct">
-            <label for="exampleTextarea">Instructions</label>
+            <label>Instructions</label>
             <textarea class="form-control" id="instruct" rows="10" required></textarea>
         </div>
-        <div class="form-group category">
-            <label for="exampleSelect1">Category</label>
-            <select class="form-control" id="catgory">
-                <option>Appertizer</option>
-                <option>Dessert</option>
-                <option>Poutry</option>
-                <option>Seafood</option>
-                <option>Soup</option>
-                <option>Sandwich</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary submitRecipe">Submit</button>
+        <button type="submit" class="btn btn-primary submit">Submit</button>
     </form>
 </div>
 

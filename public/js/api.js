@@ -1,7 +1,7 @@
 // Add search feature for user to search recipes fromm food2fork api
 function foodFork(recipe) {
   var key = "f4ffeed17df32b84b9cf053180ec722a";
-  var queryURL = "https://www.food2fork.com/api/search?key=" + key + "&q=" + recipe + "&page=1";
+  var queryURL = "https://www.food2fork.com/api/search?key=" + key + "&q=" + recipe + "&page=2";
   $.ajax({
     url: queryURL,
     method: "GET"
