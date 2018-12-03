@@ -13,12 +13,12 @@ module.exports = function (sequelize, DataTypes) {
   Recipe.associate = function(models) {
     Recipe.belongsTo(models.Member, {
       foreignKey: {
-        allowNull: true
+        allowNull: false
       }
     });
     Recipe.belongsTo(models.Category, {
       foreignKey: {
-        allowNull: true
+        allowNull: false
       }
     });
   };
