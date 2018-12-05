@@ -47,11 +47,12 @@ $("#submit").click(function () {
   } else {
     var recipeSearch = $(".validate").val().toLowerCase().trim();
     foodFork(recipeSearch);
+    $(".row-div").animate({scrollTop: "0px"}, 0);
   }
 });
 
 //allow div content2 to scroll
-$(".content2").scroll();
-$(".content2").animate({
+$(".row-div").scroll();
+$(".row-div").animate({
   scrollTop: 1000
 }, 2000);
