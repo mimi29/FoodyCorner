@@ -101,7 +101,7 @@
 
 /* allows scrolling for a specific div */
 
-.content2 {
+.row-div {
 	height: auto;
 	max-height: 900px;
   overflow-y: scroll;

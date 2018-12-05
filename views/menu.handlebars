@@ -1,12 +1,10 @@
-<div>
+<div class="container col-11 offset-1">
     {{#each recipe}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{name}}</h5>
-
-            {{!-- <h6 class="card-subtitle mb-2 text-muted">{{name}}</h6> --}}
             <p class="card-text">{{description}}</p>
-            <a href="#" class="card-link" data-toggle="modal" data-target="#recipeModal">Card link</a>
+            <a href="#" class="card-link" data-toggle="modal" dataid="{{this.id}}" data-target="#recipeModal">See Recipe!</a>
         </div>
     </div>
     {{/each}}
@@ -14,34 +12,47 @@
 
 <!-- Modal -->
 <div>
-    
+
     <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
-        {{#each recipe}}
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">{{name}}</h5>
+                    <h5 class="modal-title" id="nameModal"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <ol>
-                        <li>
-                            {{ingredients}}
+                        <li id="ingredientsModal">
                         </li>
                     </ol>
 
-                    <p>{{instructions}}</p>
+                    <p id="instructModal">
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
-         {{/each}}
     </div>
-   
+
 </div>
+
+<script type="text/JavaScript">
+
+$(".card-link").on("click", function(event){
+    event.preventDefault();
+    var dataId = $(this).attr("dataid");
+    $.get("/api/recipes", function(data){
+        console.log(data[dataId-1].name);
+        $("#nameModal").text(data[dataId-1].name);
+        $("#ingredientsModal").text(data[dataId-1].ingredients);
+        $("#instructModal").text(data[dataId-1].instructions);
+        $("#recipeModal").modal("toggle");
+    });
+});
+
+</script>
