@@ -7,11 +7,11 @@ module.exports = function (sequelize, DataTypes) {
   {
     timestamps: false,
     freezeTableName: false
-  }, {});
-  Member.associate = function(models) {
-    Member.hasMany(models.Recipe, {
-      onDelete: "cascade"
-    });
-  };
+  });
+  // Member.associate = function(models) {
+  //   Member.hasMany(models.Recipe, {
+  //     onDelete: "cascade"
+  //   });
+  // };
   return Member;
 };
