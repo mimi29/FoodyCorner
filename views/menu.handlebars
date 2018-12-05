@@ -1,0 +1,47 @@
+<div>
+    {{#each recipe}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+
+            {{!-- <h6 class="card-subtitle mb-2 text-muted">{{name}}</h6> --}}
+            <p class="card-text">{{description}}</p>
+            <a href="#" class="card-link" data-toggle="modal" data-target="#recipeModal">Card link</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<!-- Modal -->
+<div>
+    
+    <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        {{#each recipe}}
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">{{name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li>
+                            {{ingredients}}
+                        </li>
+                    </ol>
+
+                    <p>{{instructions}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+         {{/each}}
+    </div>
+   
+</div>
