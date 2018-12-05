@@ -10,14 +10,12 @@ var signIn = function (user) {
     data: JSON.stringify(user)
   }).done(
     function() {
-      $("#email").val("");
-      $("#password").val("");
-      $(".nav-item").hide();
+      $(".log-cl").val("");
+      console.log("success**");
       return true;
     })
     .fail(
       function(errorMsg) {
-        alert(errorMsg);
         console.log(errorMsg);
       });
 };
