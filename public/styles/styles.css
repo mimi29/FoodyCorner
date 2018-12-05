@@ -74,7 +74,9 @@
     ),
     /* bottom, image */
 		url("/images/pexels-photo-691114.jpeg");
-		background-repeat: no-repeat; 	
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover; 	
 }
 	
 .fill {
@@ -98,13 +100,16 @@
 }
 
 /* allows scrolling for a specific div */
-div{
-	position: relative;
-}
+
 .content2 {
-	height: 900px;
-  overflow: scroll;
+	height: auto;
+	max-height: 900px;
+  overflow-y: scroll;
 	width: 100%;
+}
+
+.recipe-form{
+	color: white;
 }
 
 

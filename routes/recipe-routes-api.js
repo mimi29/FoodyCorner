@@ -38,7 +38,13 @@ module.exports = function (app) {
   });
 
   app.post("/api/recipes", function (req, res) {
-    db.Recipe.create(req.body).then(function (dbRecipe) {
+    console.log(req.body);
+    db.Recipe.create({
+      name: req.body.name,
+      description: req.body.description,
+      ingredients: req.body.ingredients,
+      instructions: req.body.instructions
+    }).then(function (dbRecipe) {
       res.json(dbRecipe);
     });
   });

@@ -1,7 +1,7 @@
 // Add search feature for user to search recipes fromm food2fork api
 function foodFork(recipe) {
   var key = "f4ffeed17df32b84b9cf053180ec722a";
-  var queryURL = "https://www.food2fork.com/api/search?key=" + key + "&q=" + recipe + "&page=1";
+  var queryURL = "https://www.food2fork.com/api/search?key=" + key + "&q=" + recipe + "&page=2";
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -26,10 +26,31 @@ function foodFork(recipe) {
 $("#submit").click(function () {
   event.preventDefault();
   $(".content2").empty();
-  var recipeSearch = $("#searchBar").val().toLowerCase().trim();
-  foodFork(recipeSearch);
+
+  function validateForm(){
+    var isValid = true;
+    $(".validate").each(function(){
+      if ($(this).val() === ""){
+        isValid = false;
+      }
+    });
+    return isValid;
+  }
+
+  // var recipeSearch = $("#searchBar").val().toLowerCase().trim();
+  if ($("#recipeSearch1").val() === "clearRecipe"){
+    $(".content2").empty();
+  } else if ($("#recipeSearch1").val() === "myRecipe") {
+    alert("No Recipes Available");
+  } else if ($("#recipeSearch1").val() === "searchRecipe" && validateForm() === false) {
+    alert("Please Enter Recipe");
+  } else {
+    var recipeSearch = $(".validate").val().toLowerCase().trim();
+    foodFork(recipeSearch);
+  }
 });
 
+//allow div content2 to scroll
 $(".content2").scroll();
 $(".content2").animate({
   scrollTop: 1000

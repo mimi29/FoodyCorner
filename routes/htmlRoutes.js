@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function (app) {
+
   // Load index page
   app.get("/", function(req, res) {
     res.render("index");
@@ -13,6 +14,18 @@ module.exports = function (app) {
         recipe: dbRecipes
       });
     });
+  });
+
+  app.get("/search", function(req, res) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
+      res.render("search", {
+        recipe: dbRecipes
+      });
+    });
+  });
+
+  app.get("/form", function(req, res) {
+    res.render("form");
   });
 
   // Load example page and pass in an example by id
