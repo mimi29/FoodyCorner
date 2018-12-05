@@ -18,7 +18,7 @@ module.exports = function (app) {
       where: {
         email:req.body.email        
       },
-      include: [db.Recipe]
+      //include: [db.Recipe]
     }).then(function (dbMember) {
        
       bcrypt.compare(req.body.password, dbMember.password, function(err, response) {
