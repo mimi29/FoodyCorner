@@ -40,8 +40,6 @@ $("#submit").click(function () {
   // var recipeSearch = $("#searchBar").val().toLowerCase().trim();
   if ($("#recipeSearch1").val() === "clearRecipe"){
     $(".content2").empty();
-  } else if ($("#recipeSearch1").val() === "myRecipe") {
-    alert("No Recipes Available");
   } else if ($("#recipeSearch1").val() === "searchRecipe" && validateForm() === false) {
     alert("Please Enter Recipe");
   } else {
