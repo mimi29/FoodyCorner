@@ -100,8 +100,9 @@ justify-content: end;
   background: 
     /* top, transparent red, faked with gradient */ 
     -webkit-linear-gradient(
+			top,
 			rgba(200, 193, 13, 0.35), 
-      rgb(107, 9, 42, .35)
+			rgba(200, 193, 13, 0.35) 
 	),
     /* bottom, image */
 		url("/images/pexels-photo-691114.jpeg");
