@@ -102,7 +102,11 @@ justify-content: end;
     linear-gradient(
 			rgba(200, 193, 13, 0.35), 
       rgb(107, 9, 42, .35)
-    ),
+	),
+	-webkit-linear-gradient(
+		rgba(200, 193, 13, 0.35), 
+  rgb(107, 9, 42, .35)
+),
     /* bottom, image */
 		url("/images/pexels-photo-691114.jpeg");
 		background-repeat: no-repeat;
