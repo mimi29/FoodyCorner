@@ -1,4 +1,6 @@
 // jQuery code for recipe form to post information to database
+var loginId = 1;
+var memberEmail = "foodycorner@gmail.com";
 
 $(document).ready(function(){
   var $recipeName = $("#name");
@@ -11,12 +13,15 @@ $(document).ready(function(){
   //function below to grab values from form and POST to db
   function insertRecipe(event){
     event.preventDefault();
+    console.log("member email: "+memberEmail);
+    console.log("***member id : "+loginId);
     var newRecipe = {
       name: $recipeName.val().trim(),
       description: $descriptions.val().trim(),
       ingredients: $ingredients.val().trim(),
       instructions: $instructions.val().trim(),
-      CategoryId: $category.val()
+      CategoryId: $category.val(),
+      MemberId: loginId
     };
     $.post("/api/recipes", newRecipe);
     $recipeName.val("");

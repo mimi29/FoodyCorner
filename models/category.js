@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
 
   Category.associate = function(models){
     Category.hasMany(models.Recipe, {
-      onDelete: "cascade"
+ //     onDelete: "cascade"
     });
   };
 

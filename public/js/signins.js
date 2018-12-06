@@ -9,7 +9,13 @@ var signIn = function (user) {
     url: "/api/members/login",
     data: JSON.stringify(user)
   }).done(
-    function() {
+    function(data) {
+      console.log("login");
+      console.log(data.email);
+      console.log(data.password);
+      console.log(data.id);
+      loginId = data.id;
+      memberEmail = data.password;
       $(".log-cl").val("");
       console.log("success**");
       return true;
@@ -30,7 +36,12 @@ var signMeUp = function (user) {
     data: JSON.stringify(user)
   }).done(
     function(data) {
+      console.log("signup");
       console.log(data.email);
+      console.log(data.password);
+      console.log(data.id);
+      loginId = data.id;
+      memberEmail = data.password;
       $(".reg-cl").val("");
       $("#signUpModal").modal("hide");
     })

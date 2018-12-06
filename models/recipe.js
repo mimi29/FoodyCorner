@@ -24,11 +24,11 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: true
       }
     });
-    // Recipe.belongsTo(models.Member, {
-    //   foreignKey: {
-    //     allowNull: true
-    //   }
-    // });
+    Recipe.belongsTo(models.Member, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
   };
 
   return Recipe;
