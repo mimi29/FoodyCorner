@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
   });
   Member.associate = function(models) {
     Member.hasMany(models.Recipe, {
-      onDelete: "cascade"
+ //     onDelete: "cascade"
     });
   };
   return Member;

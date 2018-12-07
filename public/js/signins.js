@@ -9,7 +9,9 @@ var signIn = function (user) {
     url: "/api/members/login",
     data: JSON.stringify(user)
   }).done(
-    function() {
+    function(data) {
+      loginId = data.id;
+      memberEmail = data.password;
       $(".log-cl").val("");
       console.log("success**");
       return true;
@@ -30,7 +32,8 @@ var signMeUp = function (user) {
     data: JSON.stringify(user)
   }).done(
     function(data) {
-      console.log(data.email);
+      loginId = data.id;
+      memberEmail = data.password;
       $(".reg-cl").val("");
       $("#signUpModal").modal("hide");
     })

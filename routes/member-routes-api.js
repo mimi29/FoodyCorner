@@ -6,7 +6,11 @@ var saltRounds = 10;
 module.exports = function (app) {
   app.get("/api/members", function (req, res) {
     db.Member.findAll({
-      include: [db.Recipe]
+      // include: [
+      //   {model:db.Recipe, 
+      //     required:false
+      //   }
+      // ]
     }).then(function (dbMember) {
       res.json(dbMember);
     });
@@ -23,7 +27,9 @@ module.exports = function (app) {
        
       bcrypt.compare(req.body.password, dbMember.password, function(err, response) {
         if (response) {
+          console.log(response);
           console.log("good");
+          console.log("login id: "+dbMember.id);
           res.json(dbMember);
         }
         else {
@@ -55,6 +61,7 @@ module.exports = function (app) {
         req.body.password = hash;
         db.Member.create(req.body)
           .then(function (dbMember) {
+            console.log("signup: "+dbMember.id);
             res.json(dbMember);
           })
           .catch(function(errors) {
