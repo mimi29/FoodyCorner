@@ -10,10 +10,6 @@ var signIn = function (user) {
     data: JSON.stringify(user)
   }).done(
     function(data) {
-      console.log("login");
-      console.log(data.email);
-      console.log(data.password);
-      console.log(data.id);
       loginId = data.id;
       memberEmail = data.password;
       $(".log-cl").val("");
@@ -36,10 +32,6 @@ var signMeUp = function (user) {
     data: JSON.stringify(user)
   }).done(
     function(data) {
-      console.log("signup");
-      console.log(data.email);
-      console.log(data.password);
-      console.log(data.id);
       loginId = data.id;
       memberEmail = data.password;
       $(".reg-cl").val("");

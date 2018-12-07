@@ -13,8 +13,6 @@ $(document).ready(function(){
   //function below to grab values from form and POST to db
   function insertRecipe(event){
     event.preventDefault();
-    console.log("member email: "+memberEmail);
-    console.log("***member id : "+loginId);
     var newRecipe = {
       name: $recipeName.val().trim(),
       description: $descriptions.val().trim(),
